@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --fuentePrincipal: "Plus Jakarta Sans", sans-serif;
+  --colorPrincipal: #e43331;
+  --colorSecundario: #00b7db;
+  --grisClaro: #f8f8f8;
+  --colorFuentePrincipal: #65696F;
+  --tamanioFuentePrincipal: 14px;
+  --colorBlanco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--tamanioFuentePrincipal);
+}
+
+body {
+  font-family: var(--fuentePrincipal);
+  color: var(--colorFuentePrincipal);
+  font-size: var(--tamanioFuentePrincipal);
+  background-color: var(--grisClaro);
+  min-height: 100vh;
+}
+.marginBottom {
+  margin-bottom: 20px;
+}
+.App {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/*--- header ---*/
+.App-header {
+  background-color: var(--colorBlanco);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.nombre {
+  color: #151616;
+  font-size: 24px;
+  font-weight: 700;
+}
+.menu-nav {
+  display: flex;
+}
+.menu-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.menu-nav ul li a{
+  text-decoration: none;
+  color: var(--colorFuentePrincipal);
+}
+
+.menu-nav ul li ul {
+  display: none;;
+}
+.navegacion li {
+  position: relative;
+}
+
+.navegacion a {
+  padding: 5px;
+  display: inline-block;
+  color: black;
+}
+.flecha {
+  width: 10px;
+  height: 10px;
+}
+
+/* Submenú oculto por defecto */
+.submenu {
+  display: none;
+  width: 150px;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  z-index: 100;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.navegacion li:hover .submenu {
+  display: block;
+}
+
+.submenu li a {
+  padding: 10px;
+  display: block;
+  white-space: nowrap;
+}
+.submenu li:not(:last-child) {
+  border-bottom: 2px solid #6094e6;
+}
+
+.submenu li a:hover {
+  background-color: #eee;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.redes-sociales img {
+  max-width: 25px;
+}
+
+
+/*--- Main ---*/
+.main {
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  /* margin-bottom: -58px; */
+  padding: 100px 20px 0 20px;
+}
+
+/*--- Inicio ---*/
+.inicio{
+  max-width: 90%;
+  margin: 0 auto;
+}
+.hero-img {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  /* height: calc(100vh - 80px); */
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  transition: opacity 3s ease-in-out;
+  opacity: 0;
+  z-index: 0;
+  display: block;
+}
+.hero-img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/*--- Proyectos ---*/
+.proyectos {
+  max-width: 90%;
+  margin: 0 auto 10px auto;
+}
+.proyecto-titulo {
+  text-align: center;
+}
+.titulo {
+  text-align: center;
+  margin-bottom: 10px;
+}
+/* .contenido-proyecto {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+} */
+.proyecto-item {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  /* border: 1px solid #e43331; */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-items: center;
+  padding: 10px;
+}
+.proyecto-descripcion{
+  max-width: 70%;
+  text-align: center;
+}
+.proyecto-descripcion p:first-of-type {
+  margin-bottom: 10px;
+}
+.proyecto-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  width: 80%;
+}
+.proyecto-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+} 
+
+/*--- Periodismo ---*/
+.periodismo {
+  max-width: 80%;
+  margin: 0 auto 10px auto;
+  background-color: #fafafa;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #222;
+}
+
+.proyecto-periodismo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.proyecto-periodismo.invertido {
+  grid-template-columns: 1fr 1fr;
+  direction: rtl;
+}
+
+.proyecto-periodismo.invertido .proyecto-texto {
+  direction: ltr;
+}
+
+.proyecto-texto h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #e43331;
+}
+
+.proyecto-texto p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.proyecto-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.proyecto-galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.proyecto-galeria img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .proyecto-periodismo {
+    grid-template-columns: 1fr;
+  }
+  .proyecto-periodismo.invertido {
+    direction: ltr;
+  }
+}
+/*--- Deporte ---*/
+.deporte {
+  padding: 0 5% 50px;
+  background: linear-gradient(to right, #f5f5f5, #ffffff);
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.deporte-galeria {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-items: center;
+  /* flex-direction: column; */
+  overflow-x: auto;
+  gap: 30px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.card-deporte {
+  /* flex: 0 0 80%; */
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* scroll-snap-align: center;
+  overflow: hidden; */
+  transition: transform 0.3s ease;
+}
+
+.card-deporte:hover {
+  transform: scale(1.02);
+}
+
+.card-img {
+  width: 100%;
+  text-align: center;
+  /* overflow: hidden; */
+}
+.deporte-texto .card-deporte:first-of-type {
+  margin-bottom: 20px;
+}
+
+.card-img img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-texto {
+  padding: 30px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-texto h2 {
+  font-size: 1.5rem;
+  color: #e43331;
+  margin-bottom: 10px;
+}
+
+.card-texto p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-deporte {
+    flex-direction: column;
+    flex: 0 0 90%;
+  }
+
+  .card-img,
+  .card-texto {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*--- Bio ---*/
+.main-bio {
+  margin-top: 100px;
+}
+.bio-yo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.bio-formacion {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  justify-items: center;
+}
+.galardones ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 75px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+}
+.formacion {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border: 1px solid #000;
+  padding: 50px;
+}
+
+/*--- Footer ---*/
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* --- periodismo Extra --- */
+.periodismo-extra {
+  width: 100%;
+  margin: 0 auto 20px auto;
+}
+.margin-inicio{
+  margin-left: 25%;;
+}
+.proyecto-extra-periodismo {
+  /* height: 100vh;  */
+  box-sizing: border-box;
+}
+.lista-periodismo {
+  position: fixed;
+  width: 20%;
+  height: 90vh;
+  background-color: #f5f5f5;
+  padding: 10px;
+  overflow-y: auto;
+  border-right: 2px solid #ddd;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.noticia-link {
+  flex: 1;
+  min-height: 50px; /* opcional: altura mínima */
+}
+
+.noticia-link a {
+  display: flex; /* ✅ Cambia de block a flex */
+  align-items: center; /* ✅ Centra verticalmente */
+  justify-content: flex-start; /* ✅ Alinea a la izquierda horizontalmente */
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  background-color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.noticia-link a:hover {
+  background-color: #e0e0e0;
+  transform: translateX(5px);
+}
+
+
+
+
+
+
+.peri-proyecto-extra {
+  margin-left: 25%;
+  padding: 20px;
+}
+
+/*
+.lista-periodismo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-periodismo li h2 {
+  font-size: 18px;
+  margin: 0;
+} */
