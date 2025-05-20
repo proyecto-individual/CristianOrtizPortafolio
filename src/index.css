@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  font-family: var(--fuentePrincipal);
+  font-family: var(--fuentePrincipal), sans-serif, Arial, sans-serif;
   color: var(--colorFuentePrincipal);
   font-size: var(--tamanioFuentePrincipal);
   background-color: var(--grisClaro);
@@ -135,7 +135,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   /* margin-bottom: -58px; */
-  padding: 100px 20px 0 20px;
+  /* padding: 100px 20px 0 20px; */
 }
 
 /*--- Inicio ---*/
@@ -160,6 +160,34 @@ body {
 .hero-img.active {
   opacity: 1;
   z-index: 1;
+}
+
+.texto-imagen {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  transition: opacity 3s ease-in-out;
+  z-index: 0;
+  opacity: 0;
+}
+
+.texto-imagen.active {
+  transition: opacity 3s ease-in-out;
+  opacity: 1;
+  z-index: 1;
+}
+
+.texto-imagen h2 {
+  font-family: var(--fuentePrincipal), sans-serif;
+  color: #fff;
+  font-size: 2.5rem;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+  margin: 0;
 }
 
 /*--- Proyectos ---*/
@@ -220,7 +248,7 @@ body {
   max-width: 80%;
   margin: 0 auto 10px auto;
   background-color: #fafafa;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: var(--fuentePrincipal), sans-serif;
 }
 
 .titulo-seccion {
