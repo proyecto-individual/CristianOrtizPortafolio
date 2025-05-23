@@ -1,9 +1,146 @@
-/* body {
-  font-family: Arial, sans-serif;
+/* --- GALERIA PERIODISMO --- */
+.galeria-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-h1 {
-  color: blue;
-  font-size: 2em;
-} */
+.imagen-central {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
 
+.imagen-central img {
+  max-width: 80vw;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.imagen-central button {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.miniaturas-scroll {
+  display: flex;
+  /* justify-content: center; */
+  overflow-x: auto;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  scrollbar-width: thin;
+}
+
+.miniatura {
+  height: 80px;
+  cursor: pointer;
+  opacity: 0.7;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.miniatura.activa,
+.miniatura:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  border: 2px solid #000;
+}
+
+
+/* DEPORTES */
+.grid-miniaturas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.grid-miniaturas img {
+  width: 300px;
+  flex: 1 0 calc((100% - 3 * 12px) / 4);
+  aspect-ratio: 4 / 3; 
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform .25s;
+}
+
+.grid-miniaturas img:nth-child(7n-2),
+.grid-miniaturas img:nth-child(7n-1),
+.grid-miniaturas img:nth-child(7n) {
+  flex: 1 0 calc((100% - 2 * 12px) / 3);   /* 33 % – 3 por fila */
+}
+
+.grid-miniaturas img:hover { transform: scale(1.05); }
+
+/*---  GALERIA IMAGENES  ---*/
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.foto-grande {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); */
+  box-shadow: 0 0 0 4px white;
+  z-index: 10;
+  position: relative;
+}
+
+.flecha-galeria {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 3rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  user-select: none;
+  background: transparent;
+  color: white;
+  z-index: 20;
+  transition: background 0.2s ease;
+  border-radius: 50%;
+}
+
+.flecha-galeria:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.flecha-galeria.izq {
+  left: 40px;
+}
+
+.flecha-galeria.der {
+  right: 40px;
+}
+
+/* Zonas clickeables laterales invisibles */
+.zona-clickeable {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 25vw;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.zona-izquierda {
+  left: 0;
+}
+
+.zona-derecha {
+  right: 0;
+}

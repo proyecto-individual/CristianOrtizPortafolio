@@ -13,13 +13,13 @@ const menu = [
   {
     label: 'PERIODISMO', to: '/Periodismo',
     submenu: [
-      { label: 'Ayacucho, Cayara', href: 'Ate.html' },
-      { label: 'Foro del APEC y marcha en el Perú', href: 'Lima.html' },
-      { label: 'Vencedores de ayacucho', href: 'Peru.html' },
-      { label: 'Ciclon Yaku, Lima Este', href: 'Peru.html' },
-      { label: 'La comunidad indígena Shipibo-Konibo de Cantagallo', href: 'Peru.html' },
-      { label: 'Día Internacional de la Mujer Trabajadora', href: 'Peru.html' },
-      { label: 'marcha "Por la justicia y la dignidad"', href: 'Peru.html' }
+      { label: 'Ayacucho, Cayara', to: '/CayaraAyacucho' },
+      { label: 'Foro del APEC y marcha en el Perú', to: '/ForoApec' },
+      { label: 'Vencedores de ayacucho', to: '/VencedoresAyacucho' },
+      { label: 'Ciclon Yaku, Lima Este', to: '/CiclonYaku' },
+      { label: 'La comunidad indígena Shipibo-Konibo de Cantagallo', to: '/CantagalloAyacucho' },
+      { label: 'Día Internacional de la Mujer Trabajadora', to: '/MujerTrabajadora' },
+      { label: 'marcha "Por la justicia y la dignidad"', to: '/JusticiaDignidad' }
     ]
   },
   {
@@ -60,7 +60,7 @@ function Menu() {
                 <ul className="submenu">
                   {item.submenu.map((sub, j) => (
                     <li key={j}>
-                      <a href={sub.href}>{sub.label}</a>
+                      <Link to={sub.to}>{sub.label}</Link>
                     </li>
                   ))}
                 </ul>

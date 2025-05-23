@@ -7,13 +7,13 @@ function PeriodismoExtra() {
   return (
       <section class="periodismo-extra">
         <div className='lista-periodismo'>
-          <div className="noticia-link"><Link to="/noticia/ayacucho-cayara">AYACUCHO, CAYARA</Link></div>
-          <div className="noticia-link"><Link to="/noticia/apec-marcha">Foro del APEC y marcha en el Perú</Link></div>
-          <div className="noticia-link"><Link to="/noticia/vencedores-ayacucho">Vencedores de Ayacucho</Link></div>
-          <div className="noticia-link"><Link to="/noticia/ciclon-yaku">CICLÓN YAKU, LIMA ESTE</Link></div>
-          <div className="noticia-link"><Link to="/noticia/shipibo-cantagallo">Comunidad Shipibo-Konibo de Cantagallo</Link></div>
-          <div className="noticia-link"><Link to="/noticia/dia-mujer">Día Internacional de la Mujer Trabajadora</Link></div>
-          <div className="noticia-link"><Link to="/noticia/marcha-justicia">Marcha “Por la Justicia y la Dignidad”</Link></div>
+          <div className="noticia-link"><Link to="/CayaraAyacucho">AYACUCHO, CAYARA</Link></div>
+          <div className="noticia-link"><Link to="/ForoApec">Foro del APEC y marcha en el Perú</Link></div>
+          <div className="noticia-link"><Link to="/VencedoresAyacucho">Vencedores de Ayacucho</Link></div>
+          <div className="noticia-link"><Link to="/CiclonYaku">CICLÓN YAKU, LIMA ESTE</Link></div>
+          <div className="noticia-link"><Link to="/CantagalloAyacucho">Comunidad Shipibo-Konibo de Cantagallo</Link></div>
+          <div className="noticia-link"><Link to="/MujerTrabajadora">Día Internacional de la Mujer Trabajadora</Link></div>
+          <div className="noticia-link"><Link to="/JusticiaDignidad">Marcha “Por la Justicia y la Dignidad”</Link></div>
         </div>
 
 

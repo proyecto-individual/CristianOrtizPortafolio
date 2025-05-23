@@ -1,4 +1,6 @@
 import GaleriaImagenes from "./GaleriaImagenes";
+import { useEffect, useState } from "react";
+import GaleriaDeportes from "./GaleriaDeportes";
 
 const deporteImgs = [
   '_MG_0400.jpg',
@@ -59,40 +61,78 @@ const deporteImgs = [
 ].map(img => `/img/deporte/fedenasd/${img}`);
 
 function Deporte() {
+
+  const [abierta, setAbierta] = useState(false);
+  const [indice, setIndice] = useState(0);
+
+  // Teclas ← y → para navegar
+  useEffect(() => {
+    if (!abierta) return;
+    const handler = (e) => {
+      if (e.key === "ArrowRight") mover(1);
+      if (e.key === "ArrowLeft") mover(-1);
+      if (e.key === "Escape") setAbierta(false);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [abierta]);
+
+  const mover = (paso) => {
+    setIndice((prev) => (prev + paso + deporteImgs.length) % deporteImgs.length);
+  };
+
   return (
-    <div>
-      <section class="deporte">
-        <h1 class="titulo-seccion">Deporte</h1>
-
-        <div class="deporte-galeria">
-          <div className="deporte-texto">
-            <div class="card-deporte">
-              <div class="card-img">
-                <img src="/img/deporte/fedenasd/_MG_0400.jpg" alt="Fedenasd 1" />
+    <section className="deporte">
+      <h1 className="titulo-seccion">Deporte</h1>
+      <div className="seccion-deporte">
+        {[
+          {
+            src: "/img/deporte/fedenasd/_MG_0400.jpg",
+            titulo: "FEDENASD - Deporte y Comunidad",
+            descripcion: "Celebración del deporte y la inclusión. FEDENASD promueve actividades físicas que fortalecen el tejido social y visibilizan a atletas con discapacidad en espacios competitivos y comunitarios.",
+          },
+          {
+            src: "/img/deporte/fedenasd/_MG_9847.jpg",
+            titulo: "Fútbol Inclusivo",
+            descripcion: "Iniciativas que integran a jóvenes con discapacidades en torneos intercomunales. Una fiesta del deporte y la solidaridad.",
+          },
+        ].map((card, idx) => {
+          const indexInGaleria = deporteImgs.findIndex((img) => img === card.src);
+          return (
+            <div className="card-deporte" key={idx}>
+              <div className="card-img">
+                <img
+                  src={card.src}
+                  alt={card.titulo}
+                  loading="lazy"
+                  onClick={() => {
+                    if (indexInGaleria !== -1) {
+                      setIndice(indexInGaleria);
+                      setAbierta(true);
+                    }
+                  }}
+                  style={{ cursor: "pointer" }}
+                />
               </div>
-              <div class="card-texto">
-                <h2>FEDENASD - Deporte y Comunidad</h2>
-                <p>Celebración del deporte y la inclusión. FEDENASD promueve actividades físicas que fortalecen el tejido social y visibilizan a atletas con discapacidad en espacios competitivos y comunitarios.</p>
+              <div className="card-texto">
+                <h2>{card.titulo}</h2>
+                <p>{card.descripcion}</p>
               </div>
             </div>
-            
-            <div class="card-deporte">
-              <div class="card-img">
-                <img src="/img/deporte/fedenasd/_MG_9847.jpg" alt="Fedenasd 2" />
-              </div>
-              <div class="card-texto">
-                <h2>Fútbol Inclusivo</h2>
-                <p>Iniciativas que integran a jóvenes con discapacidades en torneos intercomunales. Una fiesta del deporte y la solidaridad.</p>
-              </div>
-            </div>
+          );
+        })}
+      </div>
 
-          </div>
-
-          <GaleriaImagenes imagenes={deporteImgs} />
-        </div>
-      </section>
-
-    </div>
-  );
+      {/* Reutilizar el componente para miniaturas + lightbox */}
+      <GaleriaDeportes
+        imagenes={deporteImgs}
+        abierta={abierta}
+        setAbierta={setAbierta}
+        indice={indice}
+        setIndice={setIndice}
+        mover={mover}
+      />
+    </section>
+  )
 }
 export default Deporte;

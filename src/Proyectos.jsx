@@ -18,12 +18,6 @@ function Proyectos() {
     '_MG_5517.jpg',
   ].map(img => `/img/proyectos/jara/${img}`);
 
-  // const jaraImgs = Array.from({ length: 16 }, (_, i) =>
-  //   i === 0 
-  //     ? '/img/proyectos/jara/COVER.JPG.jpg'
-  //     : `/img/proyectos/jara/${String(i+1).padStart(2, '0')}.jpg`
-  // );
-
   const sincretismoImgs = [
     '_MG_2160.jpg',
     '_MG_4500-7.jpg',
@@ -40,7 +34,7 @@ function Proyectos() {
     <div className="proyectos">
       <h1 className="proyecto-titulo marginBottom">Proyectos</h1>
       <div className="contenido-proyecto">
-        <div className="proyecto-item marginBottom">
+        <div className="proyecto-item">
           <ProyectoDescripcion
             titulo="JARA"
             resumen="Artilugio cimental de la mujer originaria."
