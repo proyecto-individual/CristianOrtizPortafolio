@@ -1,7 +1,7 @@
 function RedesSociales() {
   return (
     <div className="redes-sociales">
-      <a href="https://instagram.com/tuperfil" target="_blank" rel="noreferrer">
+      <a href="https://www.instagram.com/poorstreet.peru" target="_blank" rel="noreferrer">
         <img src="/img/img/instagram.png" className="instagram" alt="logoInstagram" />
       </a>
       <a href="https://wa.me/51912345678" target="_blank" rel="noreferrer">
