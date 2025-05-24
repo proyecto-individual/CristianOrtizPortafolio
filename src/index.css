@@ -140,7 +140,7 @@ body {
   width: 100%;
   box-sizing: border-box;
   /* margin-bottom: -58px; */
-  /* padding: 100px 20px 0 20px; */
+  padding: 100px 20px 0 20px;
 }
 
 /*--- Inicio ---*/
@@ -169,7 +169,7 @@ body {
 
 .texto-imagen {
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
