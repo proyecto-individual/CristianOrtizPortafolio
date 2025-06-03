@@ -88,7 +88,7 @@
 
 .section-title {
   font-size: 1.3em;
-  color: #333;
+  color: var(--colorFuenteTitulo);
   margin-top: 0;
   margin-bottom: 15px;
   display: flex;

@@ -2,10 +2,11 @@
 
 :root {
   --fuentePrincipal: "Plus Jakarta Sans", sans-serif;
-  --colorPrincipal: #e43331;
+  --colorPrincipal: #007bff;
   --colorSecundario: #00b7db;
   --grisClaro: #f8f8f8;
   --colorFuentePrincipal: #65696F;
+  --colorFuenteTitulo: #333;
   --tamanioFuentePrincipal: 14px;
   --colorBlanco: #ffffff;
 }
@@ -58,7 +59,7 @@ body {
   z-index: 1000;
 }
 .nombre {
-  color: #151616;
+  color: var(--colorFuenteTitulo);
   font-size: 24px;
   font-weight: 700;
 }
@@ -269,7 +270,7 @@ body {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
-  color: #222;
+  color: var(--colorFuenteTitulo);
 }
 
 .proyecto-periodismo {
@@ -295,7 +296,7 @@ body {
 .proyecto-texto h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #e43331;
+  color: #007bff;
 }
 
 .proyecto-texto p {
@@ -397,7 +398,7 @@ body {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #222;
+  color: var(--colorFuenteTitulo);
 }
 .seccion-deporte {
   display: grid;
@@ -439,7 +440,7 @@ body {
 
 .card-texto h2 {
   font-size: 1.5rem;
-  color: #e43331;
+  color: #007bff;
   margin-bottom: 10px;
 }
 
