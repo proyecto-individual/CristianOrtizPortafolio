@@ -4,7 +4,7 @@ import GaleriaImagenes from "./GaleriaImagenes";
 function Proyectos() {
 
   const jaraImgs = [
-    'COVER.JPG.jpg',
+    'COVER.jpg',
     '02.jpg',
     '04.jpg',
     '08.jpg',
