@@ -24,6 +24,12 @@ a {
   color: var(--colorFuentePrincipal)
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--colorFuenteTitulo);
+}
+
 html {
   box-sizing: border-box;
   font-size: var(--tamanioFuentePrincipal);
@@ -294,15 +300,12 @@ body {
 }
 
 .proyecto-texto h2 {
-  font-size: 1.8rem;
   margin-bottom: 10px;
-  color: #007bff;
 }
 
 .proyecto-texto p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #444;
 }
 
 .proyecto-galeria {
@@ -339,13 +342,13 @@ body {
   margin: 0 auto;
   padding: 0 24px;
   font-family: 'Inter', sans-serif;
-  color: #222;
   text-align: center;
 }
 
 .justicia-wrapper h1 {
   font-size: clamp(1.8rem, 2.5vw, 2.4rem);
   margin-bottom: 12px;
+  color: var(--colorFuenteTitulo);
 }
 
 .justicia-wrapper p {
@@ -439,14 +442,11 @@ body {
 }
 
 .card-texto h2 {
-  font-size: 1.5rem;
-  color: #007bff;
   margin-bottom: 10px;
 }
 
 .card-texto p {
   font-size: 1rem;
-  color: #444;
   line-height: 1.5;
 }
 
