@@ -2,16 +2,14 @@ import ImageList from "./ImageList";
 
 const vencedoresAyacuchoImgs = [
   'IMG_8154.jpg',
-  'IMG_8185.jpg',
-  'IMG_8225.jpg',
-  'IMG_8254.jpg',
-  'IMG_8279.jpg',
-  'IMG_8321.jpg',
+  'IMG_8413.jpg',
   'IMG_8327.jpg',
-  'IMG_8358.jpg',
-  'IMG_8388.jpg',
+  'IMG_8225.jpg',
+  'IMG_8279.jpg',
   'IMG_8401.jpg',
-  'IMG_8413.jpg'
+  'IMG_8254.jpg',
+  'IMG_8185.jpg',
+  'IMG_8388.jpg',
 ].map(img => `/img/periodismo/vencedores de ayacucho/${img}`);
 
 function ForoApec() {

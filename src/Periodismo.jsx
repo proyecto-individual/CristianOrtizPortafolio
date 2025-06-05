@@ -4,7 +4,7 @@ function Periodismo() {
   return (
     <div>
       <section class="periodismo">
-        <h1 class="titulo-seccion">Periodismo</h1>
+        {/* <h1 class="titulo-seccion">Periodismo</h1> */}
 
         <ProyectoPeriodismo
           titulo="AYACUCHO, CAYARA"

@@ -1,27 +1,17 @@
 import ImageList from "./ImageList";
 
 const comunidadCatagalloImgs = [
-  'IMG_7195.jpg',
-  'IMG_7202.jpg',
-  'IMG_7222.jpg',
-  'IMG_7224.jpg',
-  'IMG_7230.jpg',
   'IMG_7236-2.jpg',
-  'IMG_7251.jpg',
-  'IMG_7262.jpg',
-  'IMG_7273.jpg',
-  'IMG_7277.jpg',
-  'IMG_7301.jpg',
-  'IMG_7315.jpg',
-  'IMG_7328.jpg',
-  'IMG_7336.jpg',
   'IMG_7342.jpg',
+  'IMG_7301.jpg',
+  'IMG_7222.jpg',
+  'IMG_7230.jpg',
+  'IMG_7202.jpg',
   'IMG_7384.jpg',
-  'IMG_7399.jpg',
   'IMG_7419.jpg',
-  'IMG_7425.jpg',
-  'IMG_7439.jpg',
-  'IMG_7524.jpg'
+  'IMG_7524.jpg',
+  'IMG_7277.jpg',
+  
 ].map(img => `/img/periodismo/comunidad-cantagallo/${img}`);
 
 function CantagalloAyacucho() {

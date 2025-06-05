@@ -31,8 +31,7 @@ function Proyectos() {
   ].map(img => `/img/proyectos/tradicion-sincretismo/${img}`);
 
   return (
-    <div className="proyectos">
-      <h1 className="proyecto-titulo marginBottom">Proyectos</h1>
+    <section className="proyectos">
       <div className="contenido-proyecto">
         <div className="proyecto-item">
           <ProyectoDescripcion
@@ -50,7 +49,7 @@ function Proyectos() {
           <GaleriaImagenes imagenes={sincretismoImgs} />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 export default Proyectos;

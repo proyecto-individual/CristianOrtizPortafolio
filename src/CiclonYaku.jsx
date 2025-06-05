@@ -2,22 +2,17 @@ import ImageList from "./ImageList";
 
 const ciclonYakuImgs = [
   '_MG_9618.jpg',
-  '_MG_9693.jpg',
-  '_MG_9720.jpg',
-  '_MG_9746.jpg',
-  '_MG_9751.jpg',
-  '_MG_9763.jpg',
-  '_MG_9790.jpg',
-  '_MG_9844.jpg',
-  '_MG_9846.jpg',
-  '_MG_9851.jpg',
-  '_MG_9857.jpg',
-  '_MG_9869-2.jpg',
-  '_MG_9874-2.jpg',
   '_MG_9896.jpg',
-  '_MG_9903.jpg',
+  '_MG_9746.jpg',
+  '_MG_9763.jpg',
+  '_MG_9857.jpg',
+  '_MG_9790.jpg',
   '_MG_9941.jpg',
   '_MG_9981.jpg',
+  '_MG_9874-2.jpg',
+  '_MG_9846.jpg',
+  '_MG_9844.jpg',
+  '_MG_9903.jpg',
 ].map(img => `/img/periodismo/ciclon-yaku/${img}`);
 
 function CiclonYaku() {
