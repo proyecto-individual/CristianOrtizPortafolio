@@ -2,6 +2,7 @@
 
 :root {
   --fuentePrincipal: "Plus Jakarta Sans", sans-serif;
+  --fuenteAlternativa: "Inter", sans-serif;
   --colorPrincipal: #007bff;
   --colorSecundario: #00b7db;
   --grisClaro: #f8f8f8;
@@ -92,6 +93,11 @@ body {
   width: 10px;
   height: 10px;
 }
+.navegacion li.activo {
+  background-color: var(--colorSecundario); 
+  font-weight: bold;
+  border-radius: 10px;
+}
 
 /* Submenú oculto por defecto */
 .submenu {
@@ -140,7 +146,6 @@ body {
   position: relative;
   width: 100%;
   box-sizing: border-box;
-  /* margin-bottom: -58px; */
   padding: 100px 20px 0 20px;
 }
 
@@ -201,20 +206,16 @@ body {
   max-width: 90%;
   margin: 0 auto 10px auto;
 }
-.proyecto-titulo {
-  text-align: center;
-}
 .titulo {
   text-align: center;
   margin-bottom: 10px;
 }
 .contenido-proyecto {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
   gap: 20px;
   align-items: center;
-  justify-items: center;
-  max-width: 100%;
   margin: 0 auto;
 } 
 .proyecto-item {
@@ -223,16 +224,16 @@ body {
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); */
   padding: 20px 0;
   height: 100%;
 }
 .proyecto-descripcion{
   max-width: 80%;
-  text-align: center;
+  text-align: justify;
 }
 .proyecto-descripcion p {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .proyecto-imagenes {
   display: grid;

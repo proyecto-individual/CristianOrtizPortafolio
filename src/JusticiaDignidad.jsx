@@ -1,18 +1,17 @@
 import ImageList from './ImageList';
 
 const justiciaDignidadImgs = [
-    'IMG_6153.jpg',
-    'IMG_6173.jpg',
-    'IMG_6209.jpg',
-    'IMG_6260.jpg',
-    'IMG_6293-2.jpg',
-    'IMG_6370.jpg',
-    '_MG_6500.jpg',
-    '_MG_6514.jpg',
-    '_MG_6535.jpg',
-    '_MG_6565.jpg',
-    '_MG_6579.jpg',
-    '_MG_6604.jpg',
+  '_MG_6535.jpg',
+  'IMG_6260.jpg',
+  '_MG_6500.jpg',
+  'IMG_6209.jpg',
+  'IMG_6173.jpg',
+  'IMG_6153.jpg',
+  '_MG_6565.jpg',
+  '_MG_6604.jpg',
+  '_MG_6514.jpg',
+  'IMG_6293-2.jpg',
+  '_MG_6579.jpg',
   ].map(img => `/img/periodismo/justicia-dignidad/${img}`);
 
 function JusticiaDignidad() {
