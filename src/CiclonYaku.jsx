@@ -1,7 +1,7 @@
 import ImageList from "./ImageList";
 
 const ciclonYakuImgs = [
-  '_MG_9618.jpg',
+  '_MG_9644.jpg',
   '_MG_9896.jpg',
   '_MG_9746.jpg',
   '_MG_9763.jpg',

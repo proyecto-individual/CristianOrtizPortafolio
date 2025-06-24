@@ -27,10 +27,10 @@ function Periodismo() {
             "Cientos de ciudadanos de diferentes gremios como transporte, comercio y universidades se reunieron en el cruce de las Av. Aviación y Canadá, cerca a la sede la APEC 2024 para exigir la derogación de la Ley 32108 (Ley contra el crimen organizado), archivamiento del proyecto de ley relacionado con el Terrorismo Urbano y mayor énfasis en la lucha por la seguridad ciudadana."
           ]}
           imagenes={[
-            "/img/periodismo/foro-apec/_MG_0674.jpg",
-            "/img/periodismo/foro-apec/_MG_1043.jpg",
-            "/img/periodismo/foro-apec/_MG_0511.jpg",
-            "/img/periodismo/foro-apec/_MG_0646-2.jpg"
+            "/img/periodismo/foro-apec/_MG_0528-2.jpg",
+            "/img/periodismo/foro-apec/_MG_1060.jpg",
+            "/img/periodismo/foro-apec/_MG_0593.jpg",
+            "/img/periodismo/foro-apec/_MG_0807.jpg",
           ]} invertido />
 
         <ProyectoPeriodismo
@@ -41,10 +41,10 @@ function Periodismo() {
             "El tradicional carnaval Vencedores de Ayacucho, Patrimonio Cultural de la Nación, organizado por la Federación de Instituciones Provinciales de Ayacucho (Fedipa), el objetivo del carnaval Vencedores de Ayacucho 2025 “sigue siendo mantener la tradición, con sus diferentes costumbres y vestimentas, así como transmitir de generación en generación la autenticidad de cada pueblo de las 11 provincias que forman la región de Ayacucho”."
           ]}
           imagenes={[
+            "/img/periodismo/vencedores de ayacucho/IMG_8154.jpg",
             "/img/periodismo/vencedores de ayacucho/IMG_8413.jpg",
-            "/img/periodismo/vencedores de ayacucho/IMG_8321.jpg",
-            "/img/periodismo/vencedores de ayacucho/IMG_8388.jpg",
-            "/img/periodismo/vencedores de ayacucho/IMG_8401.jpg",
+            "/img/periodismo/vencedores de ayacucho/IMG_8327.jpg",
+            "/img/periodismo/vencedores de ayacucho/IMG_8225.jpg",
           ]} />
 
         <ProyectoPeriodismo
@@ -55,10 +55,10 @@ function Periodismo() {
             "Los distritos afectados por el desborde fueron, Chaclacayo, Huachipa, Ñaña, Carapongo, Santa Clara, Campoy, Malecón Checa y Av. Nestor Gambetta. \"Diario El Comercio. Todos los derechos reservados\"."
           ]}
           imagenes={[
-            "/img/periodismo/ciclon-yaku/_MG_9618.jpg",
-            "/img/periodismo/ciclon-yaku/_MG_9720.jpg",
-            "/img/periodismo/ciclon-yaku/_MG_9844.jpg",
-            "/img/periodismo/ciclon-yaku/_MG_9857.jpg",
+            "/img/periodismo/ciclon-yaku/_MG_9896.jpg",
+            "/img/periodismo/ciclon-yaku/_MG_9644.jpg",
+            "/img/periodismo/ciclon-yaku/_MG_9763.jpg",
+            "/img/periodismo/ciclon-yaku/_MG_9746.jpg",
           ]} invertido />
 
         <ProyectoPeriodismo
@@ -67,10 +67,10 @@ function Periodismo() {
             "Las prácticas y los conocimientos de la comunidad de los shipibos-konibos de Cantagallo, Lima, fueron declarados de interés nacional, a través de una ley dada por el Congreso de la República. El objetivo de ello es “salvaguardar y fortalecer su idioma, arte, prácticas y conocimientos; así como sus normas internas referidas a la convivencia”."
           ]}
           imagenes={[
+            "/img/periodismo/comunidad-cantagallo/IMG_7236-2.jpg",
             "/img/periodismo/comunidad-cantagallo/IMG_7524.jpg",
             "/img/periodismo/comunidad-cantagallo/IMG_7384.jpg",
             "/img/periodismo/comunidad-cantagallo/IMG_7202.jpg",
-            "/img/periodismo/comunidad-cantagallo/IMG_7262.jpg",
           ]} />
 
         <ProyectoPeriodismo
@@ -79,10 +79,10 @@ function Periodismo() {
             "Miles de mujeres marcharon por las calles del centro histórico de Lima y de distintas ciudades del país para reivindicar sus derechos y exigir el fin de la violencia machista. Portando carteles con frases como \"Vivas nos queremos\", \"Juntas sin miedo\" y \"La sangre derramada jamás será olvidada\", colectivos feministas y civiles, así como federaciones de estudiantes, recorrieron las avenidas Abancay, Nicolás de Piérola, Tacna y otras, demandando igualdad plena en todos los niveles (político, económico, jurídico y de género) y justicia para las mujeres."
           ]}
           imagenes={[
-            "/img/periodismo/mujer-trabajadora/DIA DE LA MUJER/IMG_7019-2.jpg",
-            "/img/periodismo/mujer-trabajadora/DIA DE LA MUJER 2/IMG_7592.jpg",
-            "/img/periodismo/mujer-trabajadora/DIA DE LA MUJER/IMG_7088-2.jpg",
-            "/img/periodismo/mujer-trabajadora/DIA DE LA MUJER 2/IMG_7687.jpg",
+            "/img/periodismo/mujer-trabajadora/IMG_7605.jpg",
+            "/img/periodismo/mujer-trabajadora/IMG_7663.jpg",
+            "/img/periodismo/mujer-trabajadora/IMG_7019-2.jpg",
+            "/img/periodismo/mujer-trabajadora/IMG_7065-4.jpg",
           ]} invertido />
 
         <ProyectoPeriodismo
@@ -91,10 +91,10 @@ function Periodismo() {
             "Segundo día de marcha contra el gobierno de Dina Baluarte. Cientos de Peruanos de distintas regiones del país se congregaron en manifestación pacífica por acecinados y víctimas del 2022 – 2023."
           ]}
           imagenes={[
-            "/img/periodismo/justicia-dignidad/IMG_6153.jpg",
-            "/img/periodismo/justicia-dignidad/_MG_6514.jpg",
             "/img/periodismo/justicia-dignidad/_MG_6535.jpg",
-            "/img/periodismo/justicia-dignidad/IMG_6293-2.jpg",
+            "/img/periodismo/justicia-dignidad/IMG_6260.jpg",
+            "/img/periodismo/justicia-dignidad/IMG_6153.jpg",
+            "/img/periodismo/justicia-dignidad/IMG_6209.jpg",
           ]} />
       </section>
     </div>

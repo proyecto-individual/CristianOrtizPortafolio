@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import GaleriaDeportes from "./GaleriaDeportes";
 
 const deporteImgs = [
-  '_MG_0400.jpg',
+  '_MG_0255-2.jpg',
   '_MG_9090.jpg',
   '_MG_4823.jpg',
   '_MG_8338.jpg',

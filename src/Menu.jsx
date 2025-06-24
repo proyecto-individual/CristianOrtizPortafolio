@@ -1,14 +1,15 @@
 import { useLocation, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Flecha from './assets/img/flecha-hacia-abajo.png';
 
 const menu = [
   { label: 'INICIO', to: '/Inicio' },
   {
     label: 'PROYECTOS', to: '/Proyectos',
-    submenu: [
-      { label: 'JARA', href: 'Ate.html' },
-      { label: 'Una tradición de sincretismo en los pueblos andinos', href: 'Lima.html' }
-    ]
+    //submenu: [
+    //  { label: 'JARA', href: 'Ate.html' },
+    //  { label: 'Una tradición de sincretismo en los pueblos andinos', href: 'Lima.html' }
+    //]
   },
   {
     label: 'PERIODISMO', to: '/Periodismo',
@@ -23,10 +24,10 @@ const menu = [
     ]
   },
   {
-    label: 'DEPORTE', to: '/Deporte',
-    submenu: [
-      { label: 'FEDENASD', href: 'Ate.html' }
-    ]
+    label: 'DEPORTE / INTEGRACIÓN', to: '/Deporte',
+    //submenu: [
+    //  { label: 'FEDENASD', href: 'Ate.html' }
+    //]
   },
   { label: 'BIO', to: '/Bio' }
 ];
@@ -34,38 +35,59 @@ const menu = [
 function Menu() {
   
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+  
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [menuOpen]);
 
   return (
-    <ul className="navegacion">
-      {menu.map((item, i) => {
-        const allPaths = [item.to, ...(item.submenu?.map(sub => sub.to) || [])];
-        const isActive = allPaths.some(path => location.pathname.startsWith(path));
-        
-        return (
-          <li key={i} className={isActive ? 'activo' : ''}>
-            <div>
-              {item.to ? (
-                <Link to={item.to}>{item.label}</Link>
-              ) : (
-                <a href={item.href}>{item.label}</a>
-              )}
-              {item.submenu && (
-                <>
-                  <img src={Flecha} alt="flecha" className="flecha" />
-                  <ul className="submenu">
-                    {item.submenu.map((sub, j) => (
-                      <li key={j}>
-                        <Link to={sub.to}>{sub.label}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-            </div>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      <button className="menu-hamburguesa" onClick={() => setMenuOpen(!menuOpen)}>
+        &#9776;
+      </button>
+      <ul className={`navegacion ${menuOpen ? 'abierto' : ''}`}>
+        {menu.map((item, i) => {
+          const allPaths = [item.to, ...(item.submenu?.map(sub => sub.to) || [])];
+          const isActive = allPaths.some(path => location.pathname.startsWith(path));
+          
+          return (
+            <li key={i} className={isActive ? 'activo' : ''}>
+              <div>
+                {item.to ? (
+                  <Link to={item.to} onClick={handleLinkClick}>{item.label}</Link>
+                ) : (
+                  <a href={item.href}>{item.label}</a>
+                )}
+                {item.submenu && (
+                  <>
+                    <img src={Flecha} alt="flecha" className="flecha" />
+                    <ul className="submenu">
+                      {item.submenu.map((sub, j) => (
+                        <li key={j}>
+                          <Link to={sub.to} onClick={handleLinkClick}>{sub.label}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 }
 

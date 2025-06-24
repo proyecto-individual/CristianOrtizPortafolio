@@ -26,7 +26,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <div className="datos">
-            <h2 className="nombre">Cristian Ortiz Sanchez</h2>
+            <h2 className="nombre">Cristhian Ortiz S.</h2>
             <p className="profesion">Fotógrafo</p>
           </div>
           <div className="menu-nav">
