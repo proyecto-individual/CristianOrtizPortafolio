@@ -16,7 +16,7 @@ function Proyectos() {
     '15.jpg',
     '14.jpg',
     '_MG_5517.jpg',
-  ].map(img => `/img/proyectos/jara/${img}`);
+  ].map(img => `/img/proyectos/qara/${img}`);
 
   const sincretismoImgs = [
     '_MG_2160.jpg',
@@ -35,7 +35,7 @@ function Proyectos() {
       <div className="contenido-proyecto">
         <div className="proyecto-item">
           <ProyectoDescripcion
-            titulo="JARA"
+            titulo="QARA"
             resumen="Artilugio cimental de la mujer originaria."
             descripcion={`“La he visto arropar a sus hijos sobre las nubes e Hilar las nubes con manos de araña”. Este proyecto fotográfico abarca la importancia de la qara (pellejo de ovino) como artilugio de la mujer campesina, la deconstrucción  de materiales naturales como la qara a posibilitado durante décadas la sostenibilidad económica y la protección de sus consanguíneos ante extremas temperaturas bajas. Mi cercanía hacia las familias campesinas me ha permitido narrar con imágenes bajo una perspectivas intima la importancia de este material, la qara vive en cada mujer de estas tierras, en cada madre originaria de identidad genuina
               y en cada niño que juega con su madre, la qara es un símbolo de resistencia y lucha por la vida.`} />

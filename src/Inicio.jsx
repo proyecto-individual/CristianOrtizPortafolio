@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const imagenes =[
-  { path: '/img/proyectos/jara/COVER.jpg', texto: 'Proyecto Jara'},
+  { path: '/img/proyectos/qara/COVER.jpg', texto: 'Proyecto Qara'},
   { path: '/img/proyectos/tradicion-sincretismo/_MG_2160.jpg', texto: 'Tradicion y Sincretismo'},
   { path: '/img/periodismo/ayacucho-cayara/36 AÑOS DESPUES/_MG_1371-2.jpg', texto: 'Ayacucho Cayara'},
   { path: '/img/periodismo/foro-apec/_MG_0593.jpg', texto: 'Foro APEC y marcha en el Perú'},

@@ -7,7 +7,7 @@ const menu = [
   {
     label: 'PROYECTOS', to: '/Proyectos',
     //submenu: [
-    //  { label: 'JARA', href: 'Ate.html' },
+    //  { label: 'QARA', href: 'Ate.html' },
     //  { label: 'Una tradición de sincretismo en los pueblos andinos', href: 'Lima.html' }
     //]
   },
