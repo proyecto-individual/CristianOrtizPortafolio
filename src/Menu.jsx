@@ -29,7 +29,7 @@ const menu = [
     //  { label: 'FEDENASD', href: 'Ate.html' }
     //]
   },
-  { label: 'BIO', to: '/Bio' }
+  // { label: 'BIO', to: '/Bio' }
 ];
 
 function Menu() {

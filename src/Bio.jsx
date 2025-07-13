@@ -43,7 +43,10 @@ function Bio(){
             {/* Sección Web & Redes */}
             <Section icon="🌐" title="Web & Redes">
               <ContactInfoItem icon="📱" text="+51927932694" />
-              <ContactInfoItem icon="📷" text={<a href="https://www.instagram.com/poorstreet.peru" target="_blank" rel="noopener noreferrer">Instagram: poorstreet.peru</a>} />
+              <ContactInfoItem 
+                icon={<span title="@poorstreet.peru" role="img" aria-label="Instagram">📷</span>} 
+                text={<a href="https://www.instagram.com/poorstreet.peru" target="_blank" rel="noopener noreferrer">Instagram: poorstreet.peru</a>} 
+              />
             </Section>
 
             {/* Sección de Conocimientos */}
