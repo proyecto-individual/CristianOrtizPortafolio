@@ -12,8 +12,9 @@ const menu = [
     //]
   },
   {
-    label: 'PERIODISMO', to: '/Periodismo',
+    label: 'PERIODISMO',
     submenu: [
+      { label: 'Resumen', to: '/Periodismo' },
       { label: 'Ayacucho, Cayara', to: '/CayaraAyacucho' },
       { label: 'Foro del APEC y marcha en el Perú', to: '/ForoApec' },
       { label: 'Vencedores de ayacucho', to: '/VencedoresAyacucho' },
@@ -33,14 +34,15 @@ const menu = [
 ];
 
 function Menu() {
-  
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [periodismoOpen, setPeriodismoOpen] = useState(false);
 
   const handleLinkClick = () => {
     setMenuOpen(false);
+    setPeriodismoOpen(false);
   };
-  
+
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
@@ -61,26 +63,37 @@ function Menu() {
         {menu.map((item, i) => {
           const allPaths = [item.to, ...(item.submenu?.map(sub => sub.to) || [])];
           const isActive = allPaths.some(path => location.pathname.startsWith(path));
-          
+          const isPeriodismo = item.label === 'PERIODISMO';
           return (
-            <li key={i} className={isActive ? 'activo' : ''}>
+            <li key={i} className={isActive ? 'activo' : ''}
+                onMouseEnter={() => isPeriodismo && setPeriodismoOpen(true)}
+                onMouseLeave={() => isPeriodismo && setPeriodismoOpen(false)}>
               <div>
-                {item.to ? (
+                {item.to && !isPeriodismo ? (
                   <Link to={item.to} onClick={handleLinkClick}>{item.label}</Link>
-                ) : (
-                  <a href={item.href}>{item.label}</a>
-                )}
+                ) : null}
+                {isPeriodismo ? (
+                  <button
+                    className="submenu-toggle"
+                    onClick={() => setPeriodismoOpen((open) => !open)}
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', marginLeft: 0, display: 'flex', alignItems: 'center' }}
+                    aria-label="Mostrar/ocultar submenú de Periodismo"
+                    type="button"
+                  >
+                    <span style={{ cursor: 'pointer', userSelect: 'none', marginRight: '8px'}}>
+                      {item.label}
+                    </span>
+                    <img src={Flecha} alt="flecha" className="flecha" style={{ transform: periodismoOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
+                  </button>
+                ) : null}
                 {item.submenu && (
-                  <>
-                    <img src={Flecha} alt="flecha" className="flecha" />
-                    <ul className="submenu">
-                      {item.submenu.map((sub, j) => (
-                        <li key={j}>
-                          <Link to={sub.to} onClick={handleLinkClick}>{sub.label}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
+                  <ul className="submenu" style={isPeriodismo ? { display: periodismoOpen ? 'block' : 'none' } : {}}>
+                    {item.submenu.map((sub, j) => (
+                      <li key={j}>
+                        <Link to={sub.to} onClick={handleLinkClick}>{sub.label}</Link>
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </div>
             </li>

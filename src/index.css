@@ -205,18 +205,33 @@ body {
   }
   .navegacion a {
     font-size: 1.5rem;
+    padding: 10px 0;
   }
+  .navegacion .submenu-toggle {
+    font-size: 1.5rem;
+    padding: 10px 0;
+    display: block;
+    background: none;
+    border: none;
+    color: inherit;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .submenu-toggle span {
+    font-size: 1.5rem;
+  }
+
   .submenu {
     position: static;
     box-shadow: none;
     background-color: transparent;
     width: auto;
-    display: block !important;
     padding-left: 0;
   }
-  .navegacion li:hover .submenu {
-    display: block !important;
-  }
+  
   .submenu li:not(:last-child) {
     border-bottom: none;
   }
@@ -697,3 +712,32 @@ body {
   font-size: 18px;
   margin: 0;
 } */
+
+/* Añadir estilos para el botón de submenú para que se vea igual que los enlaces del menú */
+.navegacion .submenu-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  padding: 5px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+.navegacion .submenu-toggle span {
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+.navegacion .submenu-toggle .flecha {
+  margin-left: 6px;
+}
+
+/* Ajuste para que el hover de li siga funcionando */
+.navegacion li:hover > div > .submenu-toggle,
+.navegacion li.activo > div > .submenu-toggle {
+  background: var(--colorSecundario);
+  border-radius: 10px;
+  font-weight: bold;
+}
